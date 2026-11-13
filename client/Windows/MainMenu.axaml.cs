@@ -22,9 +22,12 @@ public partial class MainMenu : Window
     {
         try
         {
-            var list = await http.GetFromJsonAsync<List<DiagnozDto>>("http://localhost:3000/api/diagnozs");
-
-            displayZapisi.ItemsSource = list;
+            var listZapisi = await http.GetFromJsonAsync<List<DiagnozDto>>("http://localhost:3000/api/diagnozs");
+            displayZapisi.ItemsSource = listZapisi;
+            var listOwners = await http.GetFromJsonAsync<List<OwnerDto>>("http://localhost:3000/api/owners");
+            displayOwners.ItemsSource = listOwners;
+            var listPets = await http.GetFromJsonAsync<List<PetDto>>("http://localhost:3000/api/pets");
+            displayPets.ItemsSource = listPets;
         }
         catch (Exception ex)
         {

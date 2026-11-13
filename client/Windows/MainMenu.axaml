@@ -24,7 +24,13 @@
             <Button Content="Удалить"/>
             <Button Content="Измненить"/>
           </StackPanel>
-          <ListBox x:Name="displayOwners"/>
+          <ListBox x:Name="displayOwners" Height="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="dto:OwnerDto">
+                        <TextBlock Text="{Binding Display}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
       </Border>
       <Border BorderBrush="White" BorderThickness="2" Margin="5">
@@ -35,7 +41,13 @@
             <Button Content="Удалить"/>
             <Button Content="Измненить"/>
           </StackPanel>
-          <ListBox x:Name="displayPets"/>
+          <ListBox x:Name="displayPets" Height="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="dto:PetsDto">
+                        <TextBlock Text="{Binding Display}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
       </Border>
       <Border BorderBrush="White" BorderThickness="2" Margin="5">
