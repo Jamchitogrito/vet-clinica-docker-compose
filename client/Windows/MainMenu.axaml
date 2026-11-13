@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="client.Windows.MainMenu"
+        xmlns:dto="using:client.dto"
+        Title="MainMenu" Opened="OnOpened">
+  <ScrollViewer>
+    <StackPanel>
+      <Border BorderBrush="White" BorderThickness="2" Margin="5">
+        <StackPanel>
+          <TextBlock Text="Владельцы"/>
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="ФИО:"/>
+            <TextBox Width="150"/>
+            <TextBlock Text="Телефон:"/>
+            <TextBox Width="150"/>
+            <TextBlock Text="Адрес:"/>
+            <TextBox Width="150"/>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <Button Content="Добавить"/>
+            <Button Content="Удалить"/>
+            <Button Content="Измненить"/>
+          </StackPanel>
+          <ListBox x:Name="displayOwners"/>
+        </StackPanel>
+      </Border>
+      <Border BorderBrush="White" BorderThickness="2" Margin="5">
+        <StackPanel>
+          <TextBlock Text="Питомцы"/>
+          <StackPanel Orientation="Horizontal">
+            <Button Content="Добавить"/>
+            <Button Content="Удалить"/>
+            <Button Content="Измненить"/>
+          </StackPanel>
+          <ListBox x:Name="displayPets"/>
+        </StackPanel>
+      </Border>
+      <Border BorderBrush="White" BorderThickness="2" Margin="5">
+       <StackPanel>
+         <TextBlock Text="Записи"/>
+          <StackPanel Orientation="Horizontal">
+            <Button Content="Добавить"/>
+            <Button Content="Удалить"/>
+            <Button Content="Измненить"/>
+          </StackPanel>
+            <ListBox x:Name="displayZapisi" Height="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="dto:DiagnozDto">
+                        <TextBlock Text="{Binding Display}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+       </StackPanel>
+      </Border>
+    </StackPanel>
+  </ScrollViewer>
+</Window>
