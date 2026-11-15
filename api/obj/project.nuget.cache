@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4G9vkVOn1dk=",
+  "dgSpecHash": "g9n6mSHCwHM=",
   "success": true,
   "projectFilePath": "/home/dinislam/Projects/try6vetKlinica2/api/api.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "/home/dinislam/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/home/dinislam/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
     "/home/dinislam/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
-    "/home/dinislam/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.31/microsoft.netcore.app.host.linux-x64.8.0.31.nupkg.sha512"
+    "/home/dinislam/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.32/microsoft.netcore.app.host.linux-x64.8.0.32.nupkg.sha512"
   ],
   "logs": []
 }
